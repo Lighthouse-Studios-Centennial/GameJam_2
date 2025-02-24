@@ -1,0 +1,11 @@
+Model Information:
+* title:	African Baobab Med
+* source:	https://sketchfab.com/3d-models/african-baobab-med-4c215a46c9a84db1a73e9331522a6462
+* author:	Valery.Li (https://sketchfab.com/Valery.Li)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "African Baobab Med" (https://sketchfab.com/3d-models/african-baobab-med-4c215a46c9a84db1a73e9331522a6462) by Valery.Li (https://sketchfab.com/Valery.Li) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
