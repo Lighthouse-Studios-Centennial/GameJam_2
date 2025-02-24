@@ -88,6 +88,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GalleryLevel (new land)
       objectReference: {fileID: 0}
+    - target: {fileID: 5426222856312045664, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426222856312045664, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8141384333178659283, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.000000059604645
@@ -228,6 +236,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GalleryLevel (enslavement)
       objectReference: {fileID: 0}
+    - target: {fileID: 5426222856312045664, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426222856312045664, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8141384333178659283, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.000000059604645
@@ -345,6 +361,14 @@ PrefabInstance:
     - target: {fileID: 4152750048775271213, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
       propertyPath: m_Name
       value: GalleryLevel (kingdom)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426222856312045664, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426222856312045664, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10.8
       objectReference: {fileID: 0}
     - target: {fileID: 8141384333178659283, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -548,6 +572,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GalleryLevel (reclamation)
       objectReference: {fileID: 0}
+    - target: {fileID: 5426222856312045664, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426222856312045664, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8141384333178659283, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.000000059604645
@@ -717,6 +749,14 @@ PrefabInstance:
     - target: {fileID: 4152750048775271213, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
       propertyPath: m_Name
       value: GalleryLevel (warrios)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426222856312045664, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426222856312045664, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10.8
       objectReference: {fileID: 0}
     - target: {fileID: 8141384333178659283, guid: 0205a51b606c9b14ea09b27c550f751e, type: 3}
       propertyPath: m_LocalPosition.x
