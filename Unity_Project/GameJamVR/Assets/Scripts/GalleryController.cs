@@ -2,19 +2,27 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System.Collections;
+using UnityEngine.Video;
+
 
 public class GalleryController : MonoBehaviour
 {
     [SerializeField] RectTransform canvasMask;
     [SerializeField] private Image canvasImage;
+    [SerializeField] private RawImage canvasRawImage;
     [SerializeField] private Sprite[] galleryImages;
+    [SerializeField] private VideoClip[] galleryVideos;
+    [SerializeField] private VideoPlayer videoPlayer;
 
     [SerializeField] private float canvasAnimationDuration = 0.25f;
-    private int currentImageIndex = 0;
+    private int index = 0;
+    private int imageSize = 0;
+    private int videoSize = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        imageSize = galleryImages.Length;
+        videoSize = galleryVideos.Length;
     }
 
     // Update is called once per frame
@@ -37,34 +45,64 @@ public class GalleryController : MonoBehaviour
 
     IEnumerator ShowNextImage()
     {
-        currentImageIndex++;
-        if (currentImageIndex >= galleryImages.Length)
+        index++;
+
+        if(index >= imageSize + videoSize)
         {
-            currentImageIndex = 0;
+            index = 0;
         }
+        // currentImageIndex++;
+
+        // if (currentImageIndex >= galleryImages.Length)
+        // {
+        //     currentImageIndex = 0;
+        // }
 
         CloseMask();
 
         yield return new WaitForSeconds(canvasAnimationDuration);
 
-        canvasImage.sprite = galleryImages[currentImageIndex];
+        if(index < imageSize)
+        {
+            canvasImage.sprite = galleryImages[index];
+            canvasImage.gameObject.SetActive(true);
+            canvasRawImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            videoPlayer.clip = galleryVideos[index - imageSize];
+            canvasRawImage.gameObject.SetActive(true);
+            canvasImage.gameObject.SetActive(false);
+        }
 
         OpenMask();   
     }
 
     IEnumerator ShowPreviousImage()
     {
-        currentImageIndex--;
-        if (currentImageIndex < 0)
+        index--;
+
+        if(index < 0)
         {
-            currentImageIndex = galleryImages.Length - 1;
+            index = imageSize + videoSize - 1;
         }
 
         CloseMask();
 
         yield return new WaitForSeconds(canvasAnimationDuration);
 
-        canvasImage.sprite = galleryImages[currentImageIndex];
+        if(index < imageSize)
+        {
+            canvasImage.sprite = galleryImages[index];
+            canvasImage.gameObject.SetActive(true);
+            canvasRawImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            videoPlayer.clip = galleryVideos[index - imageSize];
+            canvasRawImage.gameObject.SetActive(true);
+            canvasImage.gameObject.SetActive(false);
+        }
 
         OpenMask();
     }
