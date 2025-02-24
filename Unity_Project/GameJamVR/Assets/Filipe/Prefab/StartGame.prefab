@@ -12,6 +12,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartGame
       objectReference: {fileID: 0}
+    - target: {fileID: 6316202300991540665, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
+      propertyPath: m_Size.x
+      value: 278.58447
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316202300991540665, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
+      propertyPath: m_Center.x
+      value: 59.215637
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316202300991540665, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
+      propertyPath: m_Center.z
+      value: -0.06600571
+      objectReference: {fileID: 0}
     - target: {fileID: 6344270223098548200, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -91,6 +103,12 @@ PrefabInstance:
     - target: {fileID: 6344270223098548200, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815447054595329604, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
+      propertyPath: m_text
+      value: 'Free Exploration
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
