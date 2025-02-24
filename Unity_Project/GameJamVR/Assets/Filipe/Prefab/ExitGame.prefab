@@ -10,7 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5934440081413830892, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
       propertyPath: m_Name
-      value: ButtonPrefab
+      value: ExitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316202300991540665, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
+      propertyPath: m_Size.x
+      value: 231.53955
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316202300991540665, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
+      propertyPath: m_Center.x
+      value: 35.69319
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316202300991540665, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
+      propertyPath: m_Center.z
+      value: -0.06600571
       objectReference: {fileID: 0}
     - target: {fileID: 6344270223098548200, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
       propertyPath: m_Pivot.x
@@ -91,6 +103,12 @@ PrefabInstance:
     - target: {fileID: 6344270223098548200, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815447054595329604, guid: 19398fa9ef957764d95f5c8aba488061, type: 3}
+      propertyPath: m_text
+      value: 'Exit Exposition
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
