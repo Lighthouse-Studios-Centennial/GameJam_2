@@ -1,8 +1,12 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ObjectManager : MonoBehaviour
 {
+    [SerializeField] private List<DayNightObjectHandler> dayNightObjectHandlers = new List<DayNightObjectHandler>();
+
     [SerializeField] private float _speed = 10;
     [SerializeField] private GameObject currentGameObject;
     [SerializeField] private Vector3 currentObjectScale;
@@ -10,6 +14,9 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private bool isInteractable;
     [SerializeField] private PlayerState playerState;
+    [SerializeField] private Light directionalLight;
+    [SerializeField] private GameObject Butterflies;
+    [SerializeField] private GameObject Fireflies;
 
     [Header("UI Files")]
     [SerializeField] private Sprite playButton;
@@ -28,18 +35,37 @@ public class ObjectManager : MonoBehaviour
         sliderControls.SetActive(false);
         playPauseButton.gameObject.SetActive(false);
         playPauseButton.image.sprite = pauseButton;
-
-
     }
 
     public void OnObjectTracked()
     {
+        var dayNightObject = dayNightObjectHandlers[Random.Range(0, dayNightObjectHandlers.Count)];
+        directionalLight.color = dayNightObject.lightColor;
+
         if (audioSource != null)
         {
+            audioSource.clip = dayNightObject.cycleSound;
             audioSource.Play();
         }
-
+        SwitchEffectsDayNightHandlers(dayNightObject);
         playPauseButton.gameObject.SetActive(true);
+    }
+
+    private void SwitchEffectsDayNightHandlers(DayNightObjectHandler selectedDayNightObjectHandler)
+    {
+        foreach (var handler in dayNightObjectHandlers)
+        {
+            switch (handler.objectToEnable)
+            {
+                case "Fireflies":
+                    Fireflies.SetActive(handler == selectedDayNightObjectHandler);
+                    break;
+
+                case "Butterflies":
+                    Butterflies.SetActive(handler == selectedDayNightObjectHandler);
+                    break;
+            }
+        }
     }
 
     public void OnObjectLost()
@@ -49,6 +75,7 @@ public class ObjectManager : MonoBehaviour
             audioSource.Stop();
         }
 
+        sliderControls.SetActive(false);
         playPauseButton.gameObject.SetActive(false);
     }
 
@@ -135,9 +162,9 @@ public class ObjectManager : MonoBehaviour
                     RotateObject();
                 });
 
-                zoomSlider.value = 1f;
+                //zoomSlider.value = 1f;
                 rotationSlider.value = rotationSlider.minValue;
-                currentGameObject.transform.localScale = currentObjectScale;
+                //currentGameObject.transform.localScale = currentObjectScale;
                 playerState = PlayerState.PLAY;
                 break;
 
