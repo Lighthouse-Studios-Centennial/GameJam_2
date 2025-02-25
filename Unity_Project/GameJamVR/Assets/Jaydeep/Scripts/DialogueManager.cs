@@ -21,6 +21,16 @@ public class DialogueManager : MonoBehaviour
     private bool isDialoguesAreOver = false;
     [SerializeField] private DialogueSO currentDialogueSO;
 
+    public void StartDialogue()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void StopDialogue()
+    {
+        gameObject.SetActive(false);
+    }
+
     private void Start()
     {
         NextDialogue();
