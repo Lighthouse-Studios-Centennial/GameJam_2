@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class AudioZone : MonoBehaviour
 {
-    [SerializeField] AudioZoneManager audioZoneManager;
-    [SerializeField] AudioClip songToBePlayed;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] float startingTime = 0f;
-    float endingTime = -1f;
+    [SerializeField] AudioSource source;
 
-    private void Start()
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log($"Aie!! {other.tag}");
+      Debug.Log("OnTriggerEnter");
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Aie!");
-            audioZoneManager.PlaySong(songToBePlayed, startingTime);
+            source.Play();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            source.Stop();
         }
     }
 }
