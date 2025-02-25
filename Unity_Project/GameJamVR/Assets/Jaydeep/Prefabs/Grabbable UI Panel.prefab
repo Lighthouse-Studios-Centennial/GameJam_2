@@ -2329,7 +2329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7008dac336f584da148c6e58f1b526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapToSpawn: 0
+  snapToSpawn: 1
   targetPos: {x: 0, y: 0, z: 0}
   targetRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &9127633664900994786

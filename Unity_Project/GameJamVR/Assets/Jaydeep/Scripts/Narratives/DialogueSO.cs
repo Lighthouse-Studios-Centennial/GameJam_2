@@ -5,15 +5,15 @@ using UnityEngine;
 public class DialogueSO : ScriptableObject
 {
     [Header("Dialogue Data")]
-    [SerializeField] private string Title;
+    [SerializeField] private QuestEnum Title;
     [SerializeField] private string[] Dialogues;
 
-    public string GetTitle()
+    public QuestEnum GetQuest()
     {
         return Title;
     }
 
-    public List<string> GetDialogues()
+    public List<string> GetClues()
     {
         return new List<string>(Dialogues);
     }
