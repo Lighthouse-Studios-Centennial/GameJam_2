@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49cf78c8ee07994ea20d0ede0f8b46e, type: 3}
   m_Name: Enslavement
   m_EditorClassIdentifier: 
-  Title: Enslavement
+  Title: 2
   Dialogues:
   - 'Clue 1: Through chains and darkened nights of grief, a journey''s start, where
     hope was brief.'
