@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Windows;
 
+using Vuforia;
+
 public class ObjectManager : MonoBehaviour
 {
     [SerializeField] private List<DayNightObjectHandler> dayNightObjectHandlers = new List<DayNightObjectHandler>();
@@ -34,7 +36,7 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] private AudioSource baobabRattleSource;
 
     [SerializeField] private TMP_InputField inputField;
-    [SerializeField] private Image headerPanel;
+    [SerializeField] private UnityEngine.UI.Image headerPanel;
     [SerializeField] private Color rightColor;
     [SerializeField] private Color wrongColor;
     [SerializeField] private string rightAnswer;
@@ -46,6 +48,8 @@ public class ObjectManager : MonoBehaviour
 
     private void Awake()
     {
+        // Initialize Vuforia manually
+        VuforiaApplication.Instance.Initialize();
         playerState = PlayerState.PLAY;
         currentObjectScale = currentGameObject.transform.localScale;
         currentObjectRotation = currentGameObject.transform.localRotation.eulerAngles;

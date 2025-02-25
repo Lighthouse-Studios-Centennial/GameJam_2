@@ -1,5 +1,0 @@
-E:/College/GameJam/GameJam_2/Unity_Project/Game_Jam/.utmp/Debug/1s5d4n35/arm64-v8a/CMakeFiles/edit_cache.dir
-E:/College/GameJam/GameJam_2/Unity_Project/Game_Jam/.utmp/Debug/1s5d4n35/arm64-v8a/CMakeFiles/rebuild_cache.dir
-E:/College/GameJam/GameJam_2/Unity_Project/Game_Jam/.utmp/Debug/1s5d4n35/arm64-v8a/GameActivity/CMakeFiles/game.dir
-E:/College/GameJam/GameJam_2/Unity_Project/Game_Jam/.utmp/Debug/1s5d4n35/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
-E:/College/GameJam/GameJam_2/Unity_Project/Game_Jam/.utmp/Debug/1s5d4n35/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
