@@ -3,7 +3,27 @@ guid: 78da29866dcb81641be3fc054a28e347
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AfricanBaobabBark
+    second: {fileID: 2100000, guid: 2c65aaf22ee0a8740a76a555ddc37ab3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BaobabLeaf
+    second: {fileID: 2100000, guid: 90e4eeca83b870342a15497377956bb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Branches_01
+    second: {fileID: 2100000, guid: 82efdc1a26798e8448e542f5e2e7225d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cap_02
+    second: {fileID: 2100000, guid: 35e03d0325350ab449836dc62fd6d1d2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
