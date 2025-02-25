@@ -18,26 +18,29 @@ public class DialogueManager : MonoBehaviour
 
     private int currentDialogueIndex = 0;
     private int currentClueIndex = 0;
+    private bool isQuestMode;
     private bool isDialoguesAreOver = false;
     [SerializeField] private DialogueSO currentDialogueSO;
 
     public void StartDialogue()
     {
         gameObject.SetActive(true);
+        isQuestMode = true;
+
+        NextDialogue();
+        dialoguePanel.SetActive(true);
     }
 
     public void StopDialogue()
     {
         gameObject.SetActive(false);
-    }
-
-    private void Start()
-    {
-        NextDialogue();
+        isQuestMode = false;
     }
 
     private void Update()
     {
+        if (!isQuestMode) return;
+
         if (!isDialoguesAreOver && dialogueInputActionProp.action.triggered)
         {
             dialoguePanel.SetActive(!dialoguePanel.activeSelf);
@@ -75,5 +78,7 @@ public class DialogueManager : MonoBehaviour
 
         dialogueText.text = clues[currentClueIndex];
         currentClueIndex = (currentClueIndex + 1) % clues.Count;
+
+        dialoguePanel.SetActive(true);
     }
 }

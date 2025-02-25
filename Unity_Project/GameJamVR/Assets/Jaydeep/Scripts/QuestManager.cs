@@ -11,20 +11,28 @@ public class QuestManager : MonoBehaviour
     private bool isReclaimedVisited;
     private bool isWarriorVisited;
 
+    private bool isQuestMode;
+
     public void DiscoveryMode()
     {
         dialogueManager.StartDialogue();
         gameObject.SetActive(true);
+
+        isQuestMode = true;
     }
 
     public void ExplorationMode()
     {
         dialogueManager.StopDialogue();
         gameObject.SetActive(false);
+
+        isQuestMode = false;
     }
 
     public void CheckQuestCompletion(QuestEnum questEnum)
     {
+        if (!isQuestMode) return;
+
         var currentQuest = dialogueManager.GetCurrentDialogueSO().GetQuest();
 
         if (currentQuest == questEnum) // Check if any questEnum is matching with the current quest
