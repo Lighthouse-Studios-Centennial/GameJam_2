@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49cf78c8ee07994ea20d0ede0f8b46e, type: 3}
   m_Name: Warriors
   m_EditorClassIdentifier: 
-  Title: Warriors
+  Title: 5
   Dialogues:
   - 'Clue 1: With hearts of steel, the brave shall rise, their legacy in battles
     lies.'

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49cf78c8ee07994ea20d0ede0f8b46e, type: 3}
   m_Name: Kingdoms
   m_EditorClassIdentifier: 
-  Title: Kingdoms
+  Title: 1
   Dialogues:
   - 'Clue 1: In golden realms where wisdom thrived, the seeds of greatness were derived.'
   - 'Clue 2: In libraries vast, where knowledge flowed, the tales of kingdoms past
