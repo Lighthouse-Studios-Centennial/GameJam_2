@@ -68,7 +68,9 @@ public class ObjectManager : MonoBehaviour
             audioSource.Play();
         }
         SwitchEffectsDayNightHandlers(dayNightObject);
+        sliderControls.SetActive(false);
         playPauseButton.gameObject.SetActive(true);
+        playPauseButton.image.sprite = pauseButton;
     }
 
     private void SwitchEffectsDayNightHandlers(DayNightObjectHandler selectedDayNightObjectHandler)
@@ -97,6 +99,7 @@ public class ObjectManager : MonoBehaviour
 
         sliderControls.SetActive(false);
         playPauseButton.gameObject.SetActive(false);
+        playPauseButton.image.sprite = pauseButton;
     }
 
     public void Update()
