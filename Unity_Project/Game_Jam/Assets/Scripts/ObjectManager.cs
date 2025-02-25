@@ -1,7 +1,10 @@
 using System.Collections.Generic;
 
+using TMPro;
+
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Windows;
 
 public class ObjectManager : MonoBehaviour
 {
@@ -27,6 +30,18 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] private Slider zoomSlider;
     [SerializeField] private Slider rotationSlider;
 
+    [SerializeField] private GameObject gamificationObject;
+    [SerializeField] private AudioSource baobabRattleSource;
+
+    [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private Image headerPanel;
+    [SerializeField] private Color rightColor;
+    [SerializeField] private Color wrongColor;
+    [SerializeField] private string rightAnswer;
+    [SerializeField] private AudioClip rightAnswerClip;
+    [SerializeField] private AudioClip wrongAnswerClip;
+    [SerializeField] private AudioSource guessAudioSource;
+
     private void Awake()
     {
         playerState = PlayerState.PLAY;
@@ -35,6 +50,11 @@ public class ObjectManager : MonoBehaviour
         sliderControls.SetActive(false);
         playPauseButton.gameObject.SetActive(false);
         playPauseButton.image.sprite = pauseButton;
+
+        inputField.onEndEdit.AddListener(delegate
+        {
+            CheckAnswer(inputField);
+        });
     }
 
     public void OnObjectTracked()
@@ -133,6 +153,7 @@ public class ObjectManager : MonoBehaviour
                 playPauseButton.image.sprite = playButton;
                 isInteractable = true;
                 sliderControls.SetActive(true);
+                audioSource.Pause();
 
                 zoomSlider.onValueChanged.AddListener(delegate
                 {
@@ -151,6 +172,7 @@ public class ObjectManager : MonoBehaviour
                 playPauseButton.image.sprite = pauseButton;
                 isInteractable = false;
                 sliderControls.SetActive(false);
+                audioSource.Play();
 
                 zoomSlider.onValueChanged.RemoveListener(delegate
                 {
@@ -171,6 +193,58 @@ public class ObjectManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void OnMorePressed()
+    {
+        gamificationObject.SetActive(!gamificationObject.activeInHierarchy);
+
+        if (gameObject.activeInHierarchy)
+        {
+            inputField.onEndEdit.AddListener(delegate
+            {
+                CheckAnswer(inputField);
+            });
+        }
+        else
+        {
+            inputField.onEndEdit.RemoveListener(delegate
+            {
+                CheckAnswer(inputField);
+            });
+        }
+    }
+
+    public void PlayBaobab()
+    {
+        if (gamificationObject.activeInHierarchy)
+        {
+            if (baobabRattleSource.isPlaying)
+            {
+                baobabRattleSource.Stop();
+                return;
+            }
+
+            baobabRattleSource.Play();
+        }
+    }
+
+    private void CheckAnswer(TMP_InputField inputField)
+    {
+        if (inputField.text.Length == 0)
+        {
+            return;
+        }
+
+        if (inputField.text.ToLower().Equals(rightAnswer.ToLower()))
+        {
+            headerPanel.color = rightColor;
+            guessAudioSource.PlayOneShot(rightAnswerClip, 1.1f);
+            return;
+        }
+
+        headerPanel.color = wrongColor;
+        guessAudioSource.PlayOneShot(wrongAnswerClip, 1.1f);
     }
 
     public enum PlayerState
