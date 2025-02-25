@@ -41,6 +41,8 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] private AudioClip rightAnswerClip;
     [SerializeField] private AudioClip wrongAnswerClip;
     [SerializeField] private AudioSource guessAudioSource;
+    [SerializeField] private ParticleSystem firework;
+    [SerializeField] private ParticleSystem confetti;
 
     private void Awake()
     {
@@ -100,6 +102,7 @@ public class ObjectManager : MonoBehaviour
         sliderControls.SetActive(false);
         playPauseButton.gameObject.SetActive(false);
         playPauseButton.image.sprite = pauseButton;
+        gamificationObject.SetActive(false);
     }
 
     public void Update()
@@ -239,10 +242,12 @@ public class ObjectManager : MonoBehaviour
             return;
         }
 
-        if (inputField.text.ToLower().Equals(rightAnswer.ToLower()))
+        if (inputField.text.Trim().ToLower().Equals(rightAnswer.Trim().ToLower()))
         {
             headerPanel.color = rightColor;
             guessAudioSource.PlayOneShot(rightAnswerClip, 1.1f);
+            firework.Play();
+            confetti.Play();
             return;
         }
 
