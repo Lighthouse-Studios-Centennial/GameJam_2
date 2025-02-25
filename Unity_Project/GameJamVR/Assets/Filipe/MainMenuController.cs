@@ -4,9 +4,9 @@ using UnityEngine.EventSystems;
 
 public class MainMenuController : MonoBehaviour
 {
-    TextMeshProUGUI moreInfoTitle;
-    TextMeshProUGUI moreInfoDescription;
-    Animator moreInfoAnimator;
+    [SerializeField] TextMeshProUGUI moreInfoTitle;
+    [SerializeField] TextMeshProUGUI moreInfoDescription;
+    [SerializeField] Animator moreInfoAnimator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
