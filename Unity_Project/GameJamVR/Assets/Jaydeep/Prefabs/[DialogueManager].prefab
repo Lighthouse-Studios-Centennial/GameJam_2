@@ -1645,25 +1645,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac7cf193dbae1443bb26484ccddf57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstNextDialogueAction:
+  dialogueInputActionProp:
     m_UseReference: 0
     m_Action:
-      m_Name: First Next Dialogue
+      m_Name: Dialogue Input Action Prop
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: b7bcdc62-8c79-46f3-81e0-88cb13d8bcbf
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  secondNextDialogueAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Second Next Dialogue
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 1a3c6702-a173-41c0-9b10-78473be14fad
+      m_Id: 5304a1b7-eea8-45cc-9606-e1e0b9bb754c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1680,6 +1668,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0ca9c2646fa59874288898690d4ab687, type: 2}
   - {fileID: 11400000, guid: 5e31b31837b1b5d48ae91116f852a0c0, type: 2}
   - {fileID: 11400000, guid: f6ee317c279eab049a35f5374eadcc8e, type: 2}
+  currentDialogueSO: {fileID: 0}
 --- !u!1 &3200621942715529132
 GameObject:
   m_ObjectHideFlags: 0
